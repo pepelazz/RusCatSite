@@ -8042,7 +8042,7 @@ a.badge:focus {
   transition: all 500ms linear;
 }
 .production_item:hover {
-  background: url(./images/backgrounds/wild_oliva_blue_light.png);
+  background: url(./../images/backgrounds/wild_oliva_blue_light.png);
 }
 .production_item:hover a {
   color: #999999;
@@ -8108,8 +8108,8 @@ THEME STYLES
 -------------------------------------------------------------- */
 body {
   -webkit-font-smoothing: antialiased;
-  background: url(./images/backgrounds/diagonal_waves.png);
-  background: url(./images/backgrounds/wild_oliva_light.png);
+  background: url(./../images/backgrounds/diagonal_waves.png);
+  background: url(./../images/backgrounds/wild_oliva_light.png);
 }
 h1,
 h2,
@@ -8171,7 +8171,7 @@ a:focus {
 /* =Header
 -------------------------------------------------------------- */
 header {
-  background: url(./images/backgrounds/wild_oliva_light_head.png);
+  background: url(./../images/backgrounds/wild_oliva_light_head.png);
   border-bottom: solid 1px #cccccc;
 }
 header .container {
@@ -8253,7 +8253,7 @@ header .container {
   margin-top: 22px;
   margin-right: 0;
   margin-left: 0;
-  background: url(./images/backgrounds/wild_oliva_light.png);
+  background: url(./../images/backgrounds/wild_oliva_light.png);
 }
 .navbar .btn-navbar span.nb_left {
   padding: 5px;
@@ -8270,18 +8270,18 @@ header .container {
 }
 .in .nav li a {
   margin: 0 0 6px 0px;
-  background: url(./images/backgrounds/wild_oliva_light.png);
+  background: url(./../images/backgrounds/wild_oliva_light.png);
 }
 .in .nav li a:hover,
 .in .nav li a:active {
-  background: url(./images/backgrounds/wild_oliva_blue_light.png);
+  background: url(./../images/backgrounds/wild_oliva_blue_light.png);
   color: #ffffff;
   text-shadow: 0px 0px 0 transparent;
   border-bottom: solid 0px #0088cc;
 }
 .in .nav li.active a,
 .in .nav li.active a:hover {
-  background: url(./images/backgrounds/wild_oliva_dark.png);
+  background: url(./../images/backgrounds/wild_oliva_dark.png);
   color: #ffffff;
   text-shadow: 0px 0px 0 transparent;
   border-bottom: solid 0px #0088cc;
@@ -8306,7 +8306,7 @@ header .container {
   display: block;
   float: left;
   margin: 0 3px;
-  background: url(./images/backgrounds/wild_oliva_light.png);
+  background: url(./../images/backgrounds/wild_oliva_light.png);
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px;
@@ -8323,7 +8323,7 @@ header .container {
 #social_media_wrapper a:active {
   text-decoration: none;
   color: #ffffff;
-  background: url(./images/backgrounds/wild_oliva_blue_light.png);
+  background: url(./../images/backgrounds/wild_oliva_blue_light.png);
 }
 /* =Slider and Large Photo headers
 -------------------------------------------------------------- */
@@ -8472,8 +8472,8 @@ header .container {
 /* =Main, Homepage
 -------------------------------------------------------------- */
 #main {
-  background: url(./images/backgrounds/diagonal_waves.png);
-  background: url(./images/backgrounds/wild_oliva_light.png);
+  background: url(./../images/backgrounds/diagonal_waves.png);
+  background: url(./../images/backgrounds/wild_oliva_light.png);
 }
 section.call_to_action {
   text-align: center;
@@ -8589,7 +8589,7 @@ figure {
   text-align: center;
   background-color: #000000;
   background-color: #222222;
-  background: url(./images/backgrounds/wild_oliva_dark.png);
+  background: url(./../images/backgrounds/wild_oliva_dark.png);
   color: #cccccc;
   padding: 40px;
   -webkit-transition: all 500ms linear;
@@ -8796,7 +8796,7 @@ ul#portfolio_filters li .active a:hover {
 }
 .portfolio_strict .portfolio_item {
   text-align: center;
-  background: url(../images/backgrounds/wild_oliva_light_head.png);
+  background: url(../../images/backgrounds/wild_oliva_light_head.png);
   height: 280px;
   overflow: hidden;
   margin-bottom: 24px;
@@ -8815,7 +8815,7 @@ ul#portfolio_filters li .active a:hover {
   transition: all 500ms linear;
 }
 .portfolio_strict .portfolio_item:hover {
-  background: url(./images/backgrounds/wild_oliva_blue_light.png);
+  background: url(./../images/backgrounds/wild_oliva_blue_light.png);
 }
 .portfolio_strict .portfolio_item:hover a {
   color: #ffffff;
@@ -8849,7 +8849,7 @@ ul#portfolio_filters li .active a:hover {
   position: relative;
 }
 .portfolio_strict .portfolio_item .portfolio_photo a i {
-  background: url(./images/backgrounds/wild_oliva_blue_light.png);
+  background: url(./../images/backgrounds/wild_oliva_blue_light.png);
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px;
@@ -8938,7 +8938,7 @@ ul#portfolio_filters li .active a:hover {
   line-height: 22px;
 }
 .portfolio_masonry .portfolio_item a .overlay i {
-  background: url(./images/backgrounds/wild_oliva_blue_light.png);
+  background: url(./../images/backgrounds/wild_oliva_blue_light.png);
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px;
@@ -9081,7 +9081,7 @@ footer {
   color: #ffffff;
   border-top: solid 2px #ffffff;
   background-color: #222222;
-  background: url(./images/backgrounds/wild_oliva_dark.png);
+  background: url(./../images/backgrounds/wild_oliva_dark.png);
 }
 footer a:hover,
 footer a:active {
@@ -9817,12 +9817,12 @@ blockquote p {
   height: 51px;
   border: none;
   text-indent: 100%;
-  background: url(./images/ui.totop.png) no-repeat left top;
+  background: url(./../images/ui.totop.png) no-repeat left top;
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
 #toTopHover {
-  background: url(./images/ui.totop.png) no-repeat left -51px;
+  background: url(./../images/ui.totop.png) no-repeat left -51px;
   width: 51px;
   height: 51px;
   display: block;
