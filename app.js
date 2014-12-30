@@ -1,2 +1,45 @@
-(function(){var a;a=angular.module("rus-cat-app",[]),a.controller("main",["$scope","$http","$location","$timeout",function(){}]),a.directive("yandexMap",[function(){return{restrict:"A",link:function(a,b,c){var d,e,f;e=function(){var a;a=$(window).width(),$(b).css("height",500).css("width",a)},e(),$(window).resize(function(){e()}),d=a.$eval(c.yandexMap),console.log(d),f=function(){var a;a=new ymaps.Map("map",{center:[d.lat,d.lon],zoom:15}),a.controls.add("zoomControl",{left:5,top:15}),a.balloon.open([d.lat,d.lon],d.adr,{closeButton:!1})},ymaps.ready(f)}}}])}).call(this);
-//# sourceMappingURL=app.js.map
+(function() {
+  var module;
+
+  module = angular.module('rus-cat-app', []);
+
+  module.controller('main', ['$scope', '$http', '$location', '$timeout', (function($scope, $http, $location, $timeout) {})]);
+
+  module.directive('yandexMap', [
+    (function() {
+      return {
+        restrict: 'A',
+        link: function($scope, element, attrs) {
+          var coord, fixContentHeight, init;
+          fixContentHeight = function() {
+            var width;
+            width = $(window).width();
+            $(element).css('height', 500).css('width', width);
+          };
+          fixContentHeight();
+          $(window).resize(function() {
+            fixContentHeight();
+          });
+          coord = $scope.$eval(attrs.yandexMap);
+          console.log(coord);
+          init = (function() {
+            var myMap;
+            myMap = new ymaps.Map("map", {
+              center: [coord.lat, coord.lon],
+              zoom: 15
+            });
+            myMap.controls.add('zoomControl', {
+              left: 5,
+              top: 15
+            });
+            myMap.balloon.open([coord.lat, coord.lon], coord.adr, {
+              closeButton: false
+            });
+          });
+          ymaps.ready(init);
+        }
+      };
+    })
+  ]);
+
+}).call(this);
