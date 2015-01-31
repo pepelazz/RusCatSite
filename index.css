@@ -3,3 +3,39 @@
   height: 500px;
   widows: 100%;
 }
+
+/* line 5, ../app/style/partials/_style.sass */
+.wisard-list {
+  list-style: none;
+  margin: 0;
+}
+/* line 8, ../app/style/partials/_style.sass */
+.wisard-list li {
+  width: 20rem;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  background-color: #d22035;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+/* line 18, ../app/style/partials/_style.sass */
+.wisard-list li:hover {
+  background-color: #a6192a;
+}
+
+/* line 22, ../app/style/partials/_style.sass */
+.nav-arrows i {
+  display: block;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.5;
+}
+/* line 29, ../app/style/partials/_style.sass */
+.nav-arrows i:hover {
+  opacity: 1;
+}

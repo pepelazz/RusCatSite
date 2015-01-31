@@ -1,9 +1,58 @@
 (function() {
   var module;
 
-  module = angular.module('rus-cat-app', []);
+  module = angular.module('app', []);
 
   module.controller('main', ['$scope', '$http', '$location', '$timeout', (function($scope, $http, $location, $timeout) {})]);
+
+  module.controller('catalyst-choice', [
+    '$scope', '$http', '$location', '$timeout', (function($scope, $http, $location, $timeout) {
+      $scope.wizard = {
+        step: 'catalyst',
+        params: {
+          catalyst: null,
+          carrier: null,
+          size: null,
+          dispersion: null,
+          metal: null
+        },
+        gotoSize: (function(name) {
+          this.params.carrier = name;
+          if (this.params.catalyst === 'vpyk') {
+            this.step = 'size';
+          } else {
+            this.step = 'dispersion';
+          }
+        }),
+        gotoBackFromCell: (function() {
+          if (this.params.size.length === 3) {
+            this.step = 'size-3x';
+          } else {
+            this.step = 'size-2x';
+          }
+          this.params.size = null;
+        }),
+        gotoBackFromMetal: (function() {
+          if (this.params.catalyst === 'vpyk') {
+            this.step = 'cell';
+          } else {
+            this.step = 'dispersion';
+          }
+          this.params.cell = null;
+          this.params.dispersion = null;
+        }),
+        goBackFromFinal: (function() {
+          if (this.params.catalyst === 'vpyk') {
+            this.step = 'metalNumbers';
+            this.params.metal.number = null;
+          } else {
+            this.step = 'package';
+            this.params["package"] = null;
+          }
+        })
+      };
+    })
+  ]);
 
   module.directive('yandexMap', [
     (function() {
