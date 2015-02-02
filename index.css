@@ -16,7 +16,7 @@
 /* line 10, ../app/style/partials/_style.sass */
 .wisard-list .wizard-btn {
   display: inline-block;
-  width: 18rem;
+  width: 14rem;
   padding: 0.2rem 0.5rem;
   background-color: #d22035;
   text-align: center;
@@ -44,7 +44,7 @@
 }
 /* line 31, ../app/style/partials/_style.sass */
 .wisard-list .wizard-description {
-  width: 18rem;
+  width: 14rem;
   font-size: 0.9rem;
   background: #0889c9;
   padding: 0.2rem 0.5rem;
