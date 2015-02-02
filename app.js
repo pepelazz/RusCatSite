@@ -17,6 +17,7 @@
           metal: null
         },
         gotoSize: (function(name) {
+          return;
           this.params.carrier = name;
           if (this.params.catalyst === 'vpyk') {
             this.step = 'size';
@@ -86,6 +87,27 @@
             });
           });
           ymaps.ready(init);
+        }
+      };
+    })
+  ]);
+
+  module.directive('descriptionToggleDirective', [
+    (function() {
+      return {
+        restrict: 'C',
+        scope: true,
+        link: function($scope, element, attrs) {
+          $scope.descriptIsShown = false;
+          $scope.iconClass = 'icon-angle-down';
+          $scope.toggelDescription = (function() {
+            $scope.descriptIsShown = !$scope.descriptIsShown;
+            if ($scope.descriptIsShown) {
+              $scope.iconClass = 'icon-angle-up';
+            } else {
+              $scope.iconClass = 'icon-angle-down';
+            }
+          });
         }
       };
     })

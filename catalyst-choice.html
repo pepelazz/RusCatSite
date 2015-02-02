@@ -60,18 +60,63 @@
             <div ng-if="wizard.step == 'catalyst'">
               <h3>Катализатор?</h3>
               <ul class="wisard-list">
-                <li ng-click="wizard.step = 'carrier'; wizard.params.catalyst='vpyk' ">блочный</li>
-                <li ng-click="wizard.step = 'carrier'; wizard.params.catalyst='dust'">порошковый</li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.step = 'carrier'; wizard.params.catalyst='vpyk' " class="wizard-btn">блочный</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">стационарный гетерогенный катализатор в виде проницаемого керамического блока для жидкофазного или газофазного процессов</div>
+                </li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.step = 'carrier'; wizard.params.catalyst='dust'" class="wizard-btn">порошковый</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">гетерогенный катализатор в виде микрогранул из керамического композитного материала для жидкофазного процесса</div>
+                </li>
               </ul>
             </div>
-            <div ng-if="wizard.step == 'carrier'">
+            <div ng-if="wizard.step == 'carrier' &amp;&amp; wizard.params.catalyst == 'vpyk'">
               <h3>Носитель?</h3>
               <div class="nav-arrows"><i ng-click="wizard.step = 'catalyst'; wizard.params.catalyst=null" class="icon-circle-arrow-left"></i></div>
               <ul class="wisard-list">
-                <li ng-click="wizard.gotoSize('gamma')">гамма</li>
-                <li ng-click="wizard.gotoSize('zirkon')">циркон</li>
-                <li ng-click="wizard.gotoSize('carbon')">карбон</li>
-                <li ng-if="wizard.params.catalyst == 'vpyk'" ng-click="wizard.gotoSize('tsiolit')">циолит</li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.gotoSize('gamma')" class="wizard-btn">гамма</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">Гамма оксид алюминия (ɤ-Al<sub>2</sub>O<sub>3</sub>) используется для развития/увеличения удельной поверхности. Слабокислая поверхность/носитель. Размер и форма микропор регулируется.</div>
+                </li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.gotoSize('zircon')" class="wizard-btn">циркон</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">Нанесенный  сульфатированный диоксид циркония (ZrO<sub>2</sub>) используется для модифицирования поверхности и придания сверхкислых свойств носителю.</div>
+                </li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.gotoSize('carbon')" class="wizard-btn">карбон</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">Нанесенный углерод используется для существенного увеличения поверхности и придания ярковыраженных основных свойств носителю.</div>
+                </li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.gotoSize('tziolit')" class="wizard-btn">циолит</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">Нанесенный цеолит марки ZSM-5,10 используется для придания специфических свойств носителю, таких как высокая селективность/избирательность.</div>
+                </li>
+              </ul>
+            </div>
+            <div ng-if="wizard.step == 'carrier' &amp;&amp; wizard.params.catalyst == 'dust'">
+              <h3>Носитель?</h3>
+              <div class="nav-arrows"><i ng-click="wizard.step = 'catalyst'; wizard.params.catalyst=null" class="icon-circle-arrow-left"></i></div>
+              <ul class="wisard-list">
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.gotoSize('gamma')" class="wizard-btn">гамма</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">гамма керамический композит - (ɤ-Al<sub>2</sub>O<sub>3</sub>) используется для развития/увеличения удельной поверхности. Слабокислая поверхность/носитель.</div>
+                </li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.gotoSize('zircon')" class="wizard-btn">циркон</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">ЦКК - кирконий керамический композит - диоксид циркония (ZrO<sub>2</sub>) используется для модифицирования поверхности и придания сверхкислых свойств носителю.</div>
+                </li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.gotoSize('carbon')" class="wizard-btn">карбон</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">УКК углерод керамический композит - используется для существенного увеличения поверхности и придания ярковыраженных основных свойств носителю</div>
+                </li>
               </ul>
             </div>
             <div ng-if="wizard.step == 'size'">
