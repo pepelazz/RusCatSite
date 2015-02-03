@@ -17,7 +17,6 @@
           metal: null
         },
         gotoSize: (function(name) {
-          return;
           this.params.carrier = name;
           if (this.params.catalyst === 'vpyk') {
             this.step = 'size';
@@ -98,19 +97,34 @@
         restrict: 'C',
         scope: true,
         link: function($scope, element, attrs) {
+          var btnEl;
           $scope.descriptIsShown = false;
           $scope.iconClass = 'icon-angle-down';
+          btnEl = $('.wizard-btn');
           $scope.toggelDescription = (function() {
             $scope.descriptIsShown = !$scope.descriptIsShown;
             if ($scope.descriptIsShown) {
               $scope.iconClass = 'icon-angle-up';
+              btnEl.addClass('open');
             } else {
               $scope.iconClass = 'icon-angle-down';
+              btnEl.removeClass('open');
             }
           });
         }
       };
     })
   ]);
+
+  $(function() {
+    $('#hideAll .loader').css({
+      marginTop: window.innerHeight * 0.4
+    });
+    return $(window).load(function() {
+      return $('#hideAll').css({
+        display: 'none'
+      });
+    });
+  });
 
 }).call(this);

@@ -46,6 +46,13 @@
         </div>
       </div>
     </header>
+    <div id="hideAll">
+      <div class="loader">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
     <div id="main">
       <div class="container">
         <section id="articles">
@@ -61,7 +68,7 @@
               <h3>Катализатор?</h3>
               <ul class="wisard-list">
                 <li class="description-toggle-directive">
-                  <div ng-click="wizard.step = 'carrier'; wizard.params.catalyst='vpyk' " class="wizard-btn">блочный</div>
+                  <div ng-click="wizard.step = 'carrier'; wizard.params.catalyst='vpyk'" class="wizard-btn">блочный</div>
                   <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
                   <div ng-if="descriptIsShown" class="wizard-description">стационарный гетерогенный катализатор в виде проницаемого керамического блока для жидкофазного или газофазного процессов</div>
                 </li>
@@ -123,109 +130,245 @@
               <h3>Размер?</h3>
               <div class="nav-arrows"><i ng-click="wizard.step = 'carrier'; wizard.params.carrier=null" class="icon-circle-arrow-left"></i></div>
               <ul class="wisard-list">
-                <li ng-click="wizard.step = 'size-2x'">D =__мм? H =__мм?</li>
-                <li ng-click="wizard.step = 'size-3x'">Д =__мм? Ш =__мм? В =__мм?</li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.step = 'size-2x'" class="wizard-btn">цилиндрическая форма</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">цилиндрическая форма катализатора подходит для проточных реакторов, а так же для емкостных, при условии использования специальной  мешалки с корзиной.</div><img src="./images/wizard/cilinder.png" class="img-size">
+                </li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.step = 'size-3x'" class="wizard-btn">прямоугольная форма</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">прямоугольная  и сегментированная форма катализатора подходит для прямоугольных реакторов и  реакторов с диаметром свыше 300мм.</div><img src="./images/wizard/cube.png" class="img-size">
+                </li>
               </ul>
             </div>
             <div ng-if="wizard.step == 'size-2x'">
               <h3>Размер?</h3>
               <div class="nav-arrows"><i ng-click="wizard.step = 'size'; wizard.params.size=null" class="icon-circle-arrow-left"></i></div>
               <ul class="wisard-list">
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[20, 20]">20x20мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[30, 30]">30x30мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[30, 50]">30x50мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[50, 25]">50x25мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[50, 50]">50x50мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[50, 100]">50x100мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[100, 50]">100x50мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[100, 100]">100x100мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[150, 100]">150x100мм</li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[20, 20]" class="wizard-btn">20x20мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[20, 20]" class="wizard-btn"> 20x20мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[30, 30]" class="wizard-btn"> 30x30мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[30, 50]" class="wizard-btn"> 30x50мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[50, 25]" class="wizard-btn"> 50x25мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[50, 50]" class="wizard-btn"> 50x50мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[50, 100]" class="wizard-btn"> 50x100мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[100, 50]" class="wizard-btn"> 100x50мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[100, 100]" class="wizard-btn"> 100x100мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[150, 100]" class="wizard-btn"> 150x100мм</div>
+                </li>
               </ul>
             </div>
             <div ng-if="wizard.step == 'size-3x'">
               <h3>Размер?</h3>
               <div class="nav-arrows"><i ng-click="wizard.step = 'size'; wizard.params.size=null" class="icon-circle-arrow-left"></i></div>
               <ul class="wisard-list">
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[20, 20, 20]">20x20х20мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[30, 30, 20]">30x30х20мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[30, 40, 420]">30x40х420мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[75, 50, 20]">75x50х20мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[75, 75, 20]">75x75х20мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[100, 50, 20]">100x50х20мм</li>
-                <li ng-click="wizard.step = 'cell'; wizard.params.size=[100, 100, 20]">100x100х20мм</li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[20, 20, 20]" class="wizard-btn">20x20х20мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[30, 30, 20]" class="wizard-btn">30x30х20мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[30, 40, 420]" class="wizard-btn">30x40х420мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[75, 50, 20]" class="wizard-btn">75x50х20мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[75, 75, 20]" class="wizard-btn">75x75х20мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[100, 50, 20]" class="wizard-btn">100x50х20мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'cell'; wizard.params.size=[100, 100, 20]" class="wizard-btn">100x100х20мм</div>
+                </li>
               </ul>
             </div>
             <div ng-if="wizard.step == 'cell'">
               <h3>Ячейка?</h3>
               <div class="nav-arrows"><i ng-click="wizard.gotoBackFromCell()" class="icon-circle-arrow-left"></i></div>
               <ul class="wisard-list">
-                <li ng-click="wizard.step = 'metal'; wizard.params.cell={ppi:10, mm:[3, 5]}">10ppi - 3-5мм</li>
-                <li ng-click="wizard.step = 'metal'; wizard.params.cell={ppi:20, mm:[100, 2.5]}">20ppi - 1-2,5мм</li>
-                <li ng-click="wizard.step = 'metal'; wizard.params.cell={ppi:30, mm:[0.5, 100]}">30ppi - 0,5-1мм</li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.step = 'metal'; wizard.params.cell={ppi:10, mm:[3, 5]}" class="wizard-btn">10ppi - 3-5мм</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">подходит для жидкофазных процессов</div>
+                </li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.step = 'metal'; wizard.params.cell={ppi:20, mm:[100, 2.5]}" class="wizard-btn">20ppi - 1-2,5мм</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">подходит как жидкофазных так и газофазных процессов</div>
+                </li>
+                <li class="description-toggle-directive">
+                  <div ng-click="wizard.step = 'metal'; wizard.params.cell={ppi:30, mm:[0.5, 100]}" class="wizard-btn">30ppi - 0,5-1мм</div>
+                  <div ng-click="toggelDescription()" class="btn-description-toggle"><i class="{{iconClass}}"></i></div>
+                  <div ng-if="descriptIsShown" class="wizard-description">подходит для газофазных процессов.</div>
+                </li>
               </ul>
             </div>
             <div ng-if="wizard.step == 'dispersion'">
               <h3>Дисперсность?</h3>
               <div class="nav-arrows"><i ng-click="wizard.step = 'carrier'; wizard.params.carrier=null" class="icon-circle-arrow-left"></i></div>
+              <p class="wizard-quest-teaser">
+                дисперсность порошка - узкая фракция с близкими по размеру/диаметру частицами. Указывается интервал,
+                в котором находятся значения размеров частиц.
+              </p>
               <ul class="wisard-list">
-                <li ng-click="wizard.step = 'metal'; wizard.params.dispersion=[50, 100]">50-100 мкм</li>
-                <li ng-click="wizard.step = 'metal'; wizard.params.dispersion=[50, 100]"> 100-150 мкм</li>
-                <li ng-click="wizard.step = 'metal'; wizard.params.dispersion=[50, 100]"> 150-200 мкм</li>
-                <li ng-click="wizard.step = 'metal'; wizard.params.dispersion=[50, 100]"> 500-1000 мкм</li>
-                <li ng-click="wizard.step = 'metal'; wizard.params.dispersion=[1000, 2000]"> 1-2 мм</li>
-                <li ng-click="wizard.step = 'metal'; wizard.params.dispersion=[2000, 5000]"> 2-5 мм</li>
+                <li>
+                  <div ng-click="wizard.step = 'metal'; wizard.params.dispersion=[50, 100]" class="wizard-btn">50-100 мкм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'metal'; wizard.params.dispersion=[50, 100]" class="wizard-btn"> 100-150 мкм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'metal'; wizard.params.dispersion=[50, 100]" class="wizard-btn"> 150-200 мкм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'metal'; wizard.params.dispersion=[50, 100]" class="wizard-btn"> 500-1000 мкм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'metal'; wizard.params.dispersion=[1000, 2000]" class="wizard-btn"> 1-2 мм</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.step = 'metal'; wizard.params.dispersion=[2000, 5000]" class="wizard-btn"> 2-5 мм</div>
+                </li>
               </ul>
             </div>
             <div ng-if="wizard.step == 'metal'">
               <h3>Металл?</h3>
               <div class="nav-arrows"><i ng-click="wizard.gotoBackFromMetal()" class="icon-circle-arrow-left"></i></div>
+              <p class="wizard-quest-teaser">
+                активный металл определяет тип катализируемой реакции: гидрирование, окисление, изомеризация,
+                дегидрирование, диспропорционирование и пр.
+              </p>
               <ul class="wisard-list">
-                <li ng-if="wizard.params.catalyst == 'vpyk'" ng-click="wizard.params.metal.name = 'Ni'; wizard.step = 'metalNumbers'">Ni</li>
-                <li ng-click="wizard.params.metal.name = 'Pd'; wizard.step = 'metalNumbers'">Pd</li>
-                <li ng-click="wizard.params.metal.name = 'Pt'; wizard.step = 'metalNumbers'">Pt</li>
+                <li>
+                  <div ng-if="wizard.params.catalyst == 'vpyk'" ng-click="wizard.params.metal.name = 'Ni'; wizard.step = 'metalNumbers'" class="wizard-btn">Ni</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.name = 'Pd'; wizard.step = 'metalNumbers'" class="wizard-btn">Pd</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.name = 'Pt'; wizard.step = 'metalNumbers'" class="wizard-btn">Pt</div>
+                </li>
               </ul>
             </div>
             <div ng-if="wizard.step == 'metalNumbers'">
               <h3>Металл?</h3>
               <div class="nav-arrows"><i ng-click="wizard.step = 'metal'; wizard.params.metal=null" class="icon-circle-arrow-left"></i></div>
               <ul ng-if="wizard.params.metal.name == 'Ni'" class="wisard-list">
-                <li ng-click="wizard.params.metal.number='5'; wizard.step = 'final'"> 5%</li>
-                <li ng-click="wizard.params.metal.number='10'; wizard.step = 'final'"> 10%</li>
-                <li ng-click="wizard.params.metal.number='15'; wizard.step = 'final'"> 15%</li>
-                <li ng-click="wizard.params.metal.number='20'; wizard.step = 'final'"> 20%</li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='5'; wizard.step = 'final'" class="wizard-btn"> 5%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='10'; wizard.step = 'final'" class="wizard-btn"> 10%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='15'; wizard.step = 'final'" class="wizard-btn"> 15%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='20'; wizard.step = 'final'" class="wizard-btn"> 20%</div>
+                </li>
               </ul>
               <ul ng-if="(wizard.params.metal.name == 'Pd' || wizard.params.metal.name == 'Pt') &amp;&amp; wizard.params.catalyst=='vpyk'" class="wisard-list">
-                <li ng-click="wizard.params.metal.number='0.2'; wizard.step = 'final'">0.2%</li>
-                <li ng-click="wizard.params.metal.number='0.5'; wizard.step = 'final'">0.5%</li>
-                <li ng-click="wizard.params.metal.number='1'; wizard.step = 'final'">1%</li>
-                <li ng-click="wizard.params.metal.number='1.5'; wizard.step = 'final'">1.5%</li>
-                <li ng-click="wizard.params.metal.number='2'; wizard.step = 'final'">2%</li>
-                <li ng-click="wizard.params.metal.number='2.5'; wizard.step = 'final'">2.5%</li>
-                <li ng-click="wizard.params.metal.number='3'; wizard.step = 'final'">3%</li>
-                <li ng-click="wizard.params.metal.number='3.5'; wizard.step = 'final'">3.5%</li>
-                <li ng-click="wizard.params.metal.number='4'; wizard.step = 'final'">4%</li>
-                <li ng-click="wizard.params.metal.number='4.5'; wizard.step = 'final'">4.5%</li>
-                <li ng-click="wizard.params.metal.number='5'; wizard.step = 'final'"> 5%</li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='0.2'; wizard.step = 'final'" class="wizard-btn">0.2%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='0.5'; wizard.step = 'final'" class="wizard-btn">0.5%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='1'; wizard.step = 'final'" class="wizard-btn">1%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='1.5'; wizard.step = 'final'" class="wizard-btn">1.5%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='2'; wizard.step = 'final'" class="wizard-btn">2%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='2.5'; wizard.step = 'final'" class="wizard-btn">2.5%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='3'; wizard.step = 'final'" class="wizard-btn">3%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='3.5'; wizard.step = 'final'" class="wizard-btn">3.5%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='4'; wizard.step = 'final'" class="wizard-btn">4%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='4.5'; wizard.step = 'final'" class="wizard-btn">4.5%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='5'; wizard.step = 'final'" class="wizard-btn"> 5%</div>
+                </li>
               </ul>
               <ul ng-if="(wizard.params.metal.name == 'Pd' || wizard.params.metal.name == 'Pt') &amp;&amp; wizard.params.catalyst=='dust'" class="wisard-list">
-                <li ng-click="wizard.params.metal.number='0.5'; wizard.step = 'package'">0.5%</li>
-                <li ng-click="wizard.params.metal.number='1'; wizard.step = 'package'"> 1%</li>
-                <li ng-click="wizard.params.metal.number='5'; wizard.step = 'package'"> 5%</li>
-                <li ng-click="wizard.params.metal.number='10'; wizard.step = 'package'"> 10%</li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='0.5'; wizard.step = 'package'" class="wizard-btn">0.5%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='1'; wizard.step = 'package'" class="wizard-btn"> 1%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='5'; wizard.step = 'package'" class="wizard-btn"> 5%</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.metal.number='10'; wizard.step = 'package'" class="wizard-btn"> 10%</div>
+                </li>
               </ul>
             </div>
             <div ng-if="wizard.step == 'package'">
               <h3>Упаковка?</h3>
               <div class="nav-arrows"><i ng-click="wizard.step = 'metalNumbers'; wizard.params.metal.number=null" class="icon-circle-arrow-left"></i></div>
+              <p class="wizard-quest-teaser">порошковый катализатор упаковывается в индивидуальный пакет с бескислородной средой.</p>
               <ul class="wisard-list">
-                <li ng-click="wizard.params.package = '1'; wizard.step = 'final'">1г</li>
-                <li ng-click="wizard.params.package = '5'; wizard.step = 'final'">5г</li>
-                <li ng-click="wizard.params.package = '10'; wizard.step = 'final'">10г</li>
-                <li ng-click="wizard.params.package = '25'; wizard.step = 'final'">25г</li>
-                <li ng-click="wizard.params.package = '50'; wizard.step = 'final'">50г</li>
-                <li ng-click="wizard.params.package = '100'; wizard.step = 'final'">100г</li>
-                <li ng-click="wizard.params.package = '500'; wizard.step = 'final'">500г</li>
-                <li ng-click="wizard.params.package = '1000'; wizard.step = 'final'">1000г</li>
+                <li>
+                  <div ng-click="wizard.params.package = '1'; wizard.step = 'final'" class="wizard-btn">1г</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.package = '5'; wizard.step = 'final'" class="wizard-btn">5г</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.package = '10'; wizard.step = 'final'" class="wizard-btn">10г</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.package = '25'; wizard.step = 'final'" class="wizard-btn">25г</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.package = '50'; wizard.step = 'final'" class="wizard-btn">50г</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.package = '100'; wizard.step = 'final'" class="wizard-btn">100г</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.package = '500'; wizard.step = 'final'" class="wizard-btn">500г</div>
+                </li>
+                <li>
+                  <div ng-click="wizard.params.package = '1000'; wizard.step = 'final'" class="wizard-btn">1000г</div>
+                </li>
               </ul>
             </div>
             <div ng-if="wizard.step == 'final'">

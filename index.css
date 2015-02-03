@@ -1,19 +1,82 @@
+/* line 1, ../app/style/partials/_loader.sass */
+#hideAll {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: white;
+  z-index: 10000;
+}
+/* line 9, ../app/style/partials/_loader.sass */
+#hideAll .loader {
+  width: 8rem;
+  margin: 0.5rem auto 0;
+}
+/* line 12, ../app/style/partials/_loader.sass */
+#hideAll .loader > div {
+  width: 2rem;
+  height: 2rem;
+  background-color: #0dcecb;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* line 24, ../app/style/partials/_loader.sass */
+#hideAll .loader .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+/* line 27, ../app/style/partials/_loader.sass */
+#hideAll .loader .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  /* line 33, ../app/style/partials/_loader.sass */
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+
+  /* line 35, ../app/style/partials/_loader.sass */
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  /* line 40, ../app/style/partials/_loader.sass */
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  /* line 43, ../app/style/partials/_loader.sass */
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
 /* line 1, ../app/style/partials/_style.sass */
 #map {
   height: 500px;
   widows: 100%;
 }
 
-/* line 5, ../app/style/partials/_style.sass */
+/* line 10, ../app/style/partials/_style.sass */
 .wisard-list {
   list-style: none;
   margin: 0;
 }
-/* line 8, ../app/style/partials/_style.sass */
+/* line 13, ../app/style/partials/_style.sass */
 .wisard-list li {
   margin-bottom: 1rem;
 }
-/* line 10, ../app/style/partials/_style.sass */
+/* line 15, ../app/style/partials/_style.sass */
 .wisard-list .wizard-btn {
   display: inline-block;
   width: 14rem;
@@ -23,12 +86,26 @@
   font-size: 1rem;
   color: white;
   cursor: pointer;
+  border-radius: 5px 0 0 5px;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
 }
-/* line 19, ../app/style/partials/_style.sass */
+@media (min-width: 768px) {
+  /* line 15, ../app/style/partials/_style.sass */
+  .wisard-list .wizard-btn {
+    width: 20rem;
+  }
+}
+/* line 26, ../app/style/partials/_style.sass */
 .wisard-list .wizard-btn:hover {
   background-color: #a6192a;
 }
-/* line 21, ../app/style/partials/_style.sass */
+/* line 28, ../app/style/partials/_style.sass */
+.wisard-list .wizard-btn.open {
+  border-radius: 5px 0 0 0;
+}
+/* line 30, ../app/style/partials/_style.sass */
 .wisard-list .btn-description-toggle {
   display: inline-block;
   font-size: 1rem;
@@ -37,30 +114,50 @@
   margin-left: -2px;
   color: white;
   cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
 }
-/* line 29, ../app/style/partials/_style.sass */
+/* line 40, ../app/style/partials/_style.sass */
 .wisard-list .btn-description-toggle:hover {
   background-color: #a6192a;
 }
-/* line 31, ../app/style/partials/_style.sass */
+/* line 42, ../app/style/partials/_style.sass */
 .wisard-list .wizard-description {
-  width: 14rem;
+  width: 20rem;
   font-size: 0.9rem;
-  background: #0889c9;
+  background: #f3f3f3;
   padding: 0.2rem 0.5rem;
-  color: white;
+  border-radius: 0 0 5px 5px;
+  color: black;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+}
+/* line 50, ../app/style/partials/_style.sass */
+.wisard-list .img-size {
+  display: block;
+  margin: 2rem 2rem;
 }
 
-/* line 39, ../app/style/partials/_style.sass */
+/* line 54, ../app/style/partials/_style.sass */
+.wizard-quest-teaser {
+  width: 21rem;
+  text-align: justify;
+}
+
+/* line 59, ../app/style/partials/_style.sass */
 .nav-arrows i {
   display: block;
   margin-top: -0.5rem;
   margin-bottom: 0.5rem;
+  padding-left: 2px;
   font-size: 1.5rem;
   cursor: pointer;
   opacity: 0.5;
 }
-/* line 46, ../app/style/partials/_style.sass */
+/* line 67, ../app/style/partials/_style.sass */
 .nav-arrows i:hover {
   opacity: 1;
 }
