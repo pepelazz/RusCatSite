@@ -7987,24 +7987,6 @@ a.badge:focus {
     width: 90%;
 }
 
-.vpyk-technical-header{
-    font-size: 30px;
-}
-
-.vpyk-technical-tags{
-    list-style: none;
-    margin-left: 0;
-}
-
-.vpyk-technical-tags li{
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 8px;
-}
-
-.vpyk-technical-table td{
-    font-size: 12px;
-}
 
 .video-container {
     position: relative;
