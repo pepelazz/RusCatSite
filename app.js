@@ -18,9 +18,12 @@ data = {
         cb: 'Карбон'
       }
     },
-    subtitle: 'катализатор селективного гидрирования',
-    industries: ['Спецхимия', 'Лакокраски', 'Органический синтез', 'Нефтехимия', 'Синтетические волокна', 'Каучуки', 'Лесохимия/Зеленая химия/Green chemestry'],
-    processes: ['Селективное гидрообессеривание', 'Селективное восстановление ароматических нитросоединений'],
+    subtitle: 'катализатор гидрирования',
+    processes: {
+      cb: [['Селективное восстановление аминов', 'Селективное восстановление моно- нитросоединений', 'Селективное восстановление оксимов'], ['Гидрирование моно- нитросоединений', 'Тонкий органический синтез']],
+      zr: [['Селективное гидрообессеривание', 'Селективное восстановление ароматических нитросоединений'], ['Диспропорционирование', 'Гидрообессеривание']],
+      gm: [['гидрообессеривание', 'восстановление мононитросоединениий', 'селективное гидрирование ацетилена', 'селективное гидрирование этилена'], ['гидрирование ароматических углеводородов', 'гидрирование альдегидов', 'гидрирование органических кислот', 'гидрирование динитро-, тринитросоединений ']]
+    },
     params: {
       catalyst: 'блочный, стационарный',
       carrierArray: {
@@ -165,7 +168,7 @@ $(function() {
 
 
 },{"./ng-catalyst":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-catalyst.coffee","./ng-filter":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-filter.coffee","./ng-wizard-catalyst":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-wizard-catalyst.coffee"}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-catalyst.coffee":[function(require,module,exports){
-var catalystData, extendDeep, ngModule,
+var catalystData, extendDeep, metalNumberTitle, ngModule,
   __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
 module.exports = (ngModule = angular.module('catalyst', [])).name;
@@ -185,13 +188,20 @@ ngModule.controller('catalyst', [
     console.log('cellIndex:', cellIndex = $.url(urlStr).param('cl'));
     if (0 <= ['gm', 'zr', 'cb', 'tz'].indexOf(carrierName)) {
       product = $scope.product = catalystData['vpyk'];
-      $scope.product.title = product.titleParams.name['vpyk'] + "/" + product.titleParams.metal[carrierName];
+      $scope.product.title = product.titleParams.name['vpyk'] + "/" + product.titleParams.metal[carrierName] + "/" + metalNumberTitle(metalName, +metalNumber) + "/10-30ppi";
+      if (metalNumber <= 1) {
+        $scope.product.subtitle = 'катализатор селективного гидрирования';
+        $scope.product.processes = catalystData['vpyk'].processes[carrierName][0];
+      } else {
+        $scope.product.processes = catalystData['vpyk'].processes[carrierName][1];
+      }
       $scope.product.params.carrier = product.params.carrierArray[carrierName];
       $scope.product.techParams.activeSubstrate = product.params.carrierArray[carrierName];
       if (_ref = +cellIndex, __indexOf.call([0, 1, 2], _ref) >= 0) {
         $scope.product.params.cell = product.params.cellArray[cellIndex];
       }
       $scope.product.params.metal = product.params.metalArray[metalName];
+      $scope.product.params.metalMass = metalNumber + ' мас %';
       if (size != null) {
         size = size.split(',');
         if (size.length === 2) {
@@ -202,10 +212,61 @@ ngModule.controller('catalyst', [
         }
         $scope.product.params.size = sizeStr;
       }
-      console.log("$scope.product:", $scope.product);
+      $scope.catalystOrder = function() {
+        return $scope.modaIsShown = !$scope.modaIsShown;
+      };
+      $scope.request = {
+        name: null,
+        phone: null,
+        email: null,
+        message: null,
+        send: (function() {
+          $scope.modaIsShown = false;
+          $.ajax({
+            method: 'POST',
+            url: "https://mandrillapp.com/api/1.0/messages/send.json",
+            data: {
+              key: 'XrhYSIo5ZAQ6Dcbp5ItPDA',
+              message: {
+                subject: 'Заявка с сайта rus-cat.com',
+                html: '<h2>Заявка с сайта rus-cat.com</h2><ul><li>' + $scope.product.title + '</li></li><li>' + $scope.request.name + '</li><li>' + $scope.request.phone + '</li><li>' + $scope.request.email + '</li><li>' + $scope.request.message + '</li></ul><h3>Параметры</h3><ul><li>размеры:' + size + '</li><li>Содержание активного металла:' + metalNumber + '</li></ul>',
+                text: $scope.product.title + ', Имя: ' + $scope.request.name + ', тел.: ' + $scope.request.phone + ', email.: ' + $scope.request.email + ', сообщение: ' + $scope.message,
+                from_email: 'info@rus-cat.com',
+                to: [
+                  {
+                    email: 'pepelazz00@gmail.com',
+                    name: 'admin',
+                    type: 'to'
+                  }
+                ]
+              }
+            }
+          }).done((function(data) {
+            console.info(data);
+          })).fail((function() {
+            console.error('server not respond');
+          }));
+          $scope.request.name = null;
+          $scope.request.phone = null;
+          $scope.request.email = null;
+          $scope.request.message = null;
+          return false;
+        })
+      };
     }
   })
 ]);
+
+metalNumberTitle = (function(mlName, mlNum) {
+  if (mlName === 'Pd') {
+    switch (true) {
+      case mlNum <= 1:
+        return '0,2-1Pd';
+      default:
+        return '1,5-5Pd';
+    }
+  }
+});
 
 
 
@@ -224,6 +285,7 @@ ngModule.controller('filter', [
     $scope.request = {
       name: null,
       phone: null,
+      email: null,
       message: null,
       send: (function() {
         $scope.modaIsShown = false;
@@ -234,8 +296,8 @@ ngModule.controller('filter', [
             key: 'XrhYSIo5ZAQ6Dcbp5ItPDA',
             message: {
               subject: 'Заявка с сайта rus-cat.com',
-              html: '<h2>Заявка с сайта rus-cat.com</h2><ul><li>' + filterName + '</li></li><li>' + $scope.request.name + '</li><li>' + $scope.request.phone + '</li><li>' + $scope.request.message + '</li></ul>',
-              text: filterName + ', Имя: ' + $scope.request.name + ', тел.: ' + $scope.request.phone + ', сообщение: ' + $scope.message,
+              html: '<h2>Заявка с сайта rus-cat.com</h2><ul><li>' + filterName + '</li></li><li>' + $scope.request.name + '</li><li>' + $scope.request.phone + '</li><li>' + $scope.request.email + '</li><li>' + $scope.request.message + '</li></ul>',
+              text: filterName + ', Имя: ' + $scope.request.name + ', тел.: ' + $scope.request.phone + ', email.: ' + $scope.request.email + ', сообщение: ' + $scope.message,
               from_email: 'info@rus-cat.com',
               to: [
                 {
@@ -257,6 +319,7 @@ ngModule.controller('filter', [
         }));
         $scope.request.name = null;
         $scope.request.phone = null;
+        $scope.request.email = null;
         $scope.request.message = null;
         return false;
       })
