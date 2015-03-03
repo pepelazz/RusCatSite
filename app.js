@@ -80,7 +80,7 @@ module.exports = extendDeep;
 },{}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-app.coffee":[function(require,module,exports){
 var ngModule;
 
-module.exports = (ngModule = angular.module('app', [require('./ng-catalyst'), require('./ng-wizard-catalyst')])).name;
+module.exports = (ngModule = angular.module('app', [require('./ng-catalyst'), require('./ng-wizard-catalyst'), require('./ng-filter')])).name;
 
 ngModule.controller('main', ['$scope', '$http', '$location', '$timeout', (function($scope, $http, $location, $timeout) {})]);
 
@@ -164,7 +164,7 @@ $(function() {
 
 
 
-},{"./ng-catalyst":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-catalyst.coffee","./ng-wizard-catalyst":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-wizard-catalyst.coffee"}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-catalyst.coffee":[function(require,module,exports){
+},{"./ng-catalyst":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-catalyst.coffee","./ng-filter":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-filter.coffee","./ng-wizard-catalyst":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-wizard-catalyst.coffee"}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-catalyst.coffee":[function(require,module,exports){
 var catalystData, extendDeep, ngModule,
   __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
@@ -209,7 +209,64 @@ ngModule.controller('catalyst', [
 
 
 
-},{"./catalyst-data":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/catalyst-data.coffee","./extend-deep":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/extend-deep.coffee"}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-wizard-catalyst.coffee":[function(require,module,exports){
+},{"./catalyst-data":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/catalyst-data.coffee","./extend-deep":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/extend-deep.coffee"}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-filter.coffee":[function(require,module,exports){
+var ngModule;
+
+module.exports = (ngModule = angular.module('filter', [])).name;
+
+ngModule.controller('filter', [
+  '$scope', '$http', '$location', '$timeout', (function($scope, $http, $location, $timeout) {
+    var filterName;
+    $scope.filterOrder = function() {
+      return $scope.modaIsShown = !$scope.modaIsShown;
+    };
+    filterName = $('article.production_details h4').html();
+    $scope.request = {
+      name: null,
+      phone: null,
+      message: null,
+      send: (function() {
+        $scope.modaIsShown = false;
+        $.ajax({
+          method: 'POST',
+          url: "https://mandrillapp.com/api/1.0/messages/send.json",
+          data: {
+            key: 'XrhYSIo5ZAQ6Dcbp5ItPDA',
+            message: {
+              subject: 'Заявка с сайта rus-cat.com',
+              html: '<h2>Заявка с сайта rus-cat.com</h2><ul><li>' + filterName + '</li></li><li>' + $scope.request.name + '</li><li>' + $scope.request.phone + '</li><li>' + $scope.request.message + '</li></ul>',
+              text: filterName + ', Имя: ' + $scope.request.name + ', тел.: ' + $scope.request.phone + ', сообщение: ' + $scope.message,
+              from_email: 'info@rus-cat.com',
+              to: [
+                {
+                  email: 'noateq@gmail.com',
+                  name: 'Иван',
+                  type: 'to'
+                }, {
+                  email: 'pepelazz00@gmail.com',
+                  name: 'admin',
+                  type: 'to'
+                }
+              ]
+            }
+          }
+        }).done((function(data) {
+          console.info(data);
+        })).fail((function() {
+          console.error('server not respond');
+        }));
+        $scope.request.name = null;
+        $scope.request.phone = null;
+        $scope.request.message = null;
+        return false;
+      })
+    };
+  })
+]);
+
+
+
+},{}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-wizard-catalyst.coffee":[function(require,module,exports){
 var ngModule;
 
 module.exports = (ngModule = angular.module('wizard-catalyst', [])).name;
