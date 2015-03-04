@@ -234,6 +234,10 @@ ngModule.controller('catalyst', [
                 from_email: 'info@rus-cat.com',
                 to: [
                   {
+                    email: 'noateq@gmail.com',
+                    name: 'Иван',
+                    type: 'to'
+                  }, {
                     email: 'pepelazz00@gmail.com',
                     name: 'admin',
                     type: 'to'
@@ -397,7 +401,7 @@ ngModule.controller('catalyst-choice', [
         if ($scope.wizard.params["package"] != null) {
           params.push("pg=" + $scope.wizard.params["package"]);
         }
-        $window.location.assign("http://localhost:3000/production/vpyk.html?" + params.join('&'));
+        $window.location.assign("http://rus-cat.com/production/vpyk.html?" + params.join('&'));
       }
     }));
   })
