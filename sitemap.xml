@@ -3,72 +3,112 @@
 		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>http://rus-cat.com/</loc>
-	<lastmod>2015-01-15T07:40:20+01:00</lastmod>
+	<lastmod>2015-04-02T09:24:01+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://rus-cat.com/index.html</loc>
-	<lastmod>2015-01-15T07:40:22+01:00</lastmod>
+	<lastmod>2015-04-02T09:24:02+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://rus-cat.com/about.html</loc>
-	<lastmod>2015-01-15T07:40:24+01:00</lastmod>
+	<lastmod>2015-04-02T09:24:03+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://rus-cat.com/production.html</loc>
-	<lastmod>2015-01-15T07:40:27+01:00</lastmod>
+	<loc>http://rus-cat.com/production-catalyst.html</loc>
+	<lastmod>2015-04-02T09:24:03+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://rus-cat.com/processes.html</loc>
-	<lastmod>2015-01-15T07:40:29+01:00</lastmod>
+	<loc>http://rus-cat.com/production-catalyst-burn.html</loc>
+	<lastmod>2015-04-02T09:24:04+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://rus-cat.com/production-filters.html</loc>
+	<lastmod>2015-04-02T09:24:05+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://rus-cat.com/production-equipment.html</loc>
+	<lastmod>2015-04-02T09:24:05+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://rus-cat.com/articles.html</loc>
-	<lastmod>2015-01-15T07:40:32+01:00</lastmod>
+	<lastmod>2015-04-02T09:24:06+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://rus-cat.com/contact.html</loc>
-	<lastmod>2015-01-15T07:40:34+01:00</lastmod>
+	<lastmod>2015-04-02T09:24:07+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://rus-cat.com/catalyst-choice.html</loc>
+	<lastmod>2015-04-02T09:24:08+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://rus-cat.com/articles/01-sintez.html</loc>
-	<lastmod>2015-01-15T07:40:36+01:00</lastmod>
+	<lastmod>2015-04-02T09:24:09+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>http://rus-cat.com/production/vpyk.html</loc>
-	<lastmod>2015-01-15T07:40:38+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://rus-cat.com/production/noatube.html</loc>
-	<lastmod>2015-01-15T07:40:41+01:00</lastmod>
+	<lastmod>2015-04-02T09:24:10+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>http://rus-cat.com/production/dust.html</loc>
-	<lastmod>2015-01-15T07:40:45+01:00</lastmod>
+	<lastmod>2015-04-02T09:24:11+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://rus-cat.com/production/vpyk-burn-hydrogen.html</loc>
+	<lastmod>2015-04-02T09:24:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://rus-cat.com/production/vpyk-burn-gas.html</loc>
+	<lastmod>2015-04-02T09:24:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://rus-cat.com/production/vpyf-iron.html</loc>
+	<lastmod>2015-04-02T09:24:13+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://rus-cat.com/production/vpyf-al.html</loc>
+	<lastmod>2015-04-02T09:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>http://rus-cat.com/production/shaker.html</loc>
-	<lastmod>2015-01-15T07:40:47+01:00</lastmod>
+	<lastmod>2015-04-02T09:24:14+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://rus-cat.com/production/noatube.html</loc>
+	<lastmod>2015-04-02T09:24:15+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>http://rus-cat.com/production/noatube-c-type.html</loc>
-	<lastmod>2015-01-15T07:40:50+01:00</lastmod>
+	<lastmod>2015-04-02T09:24:16+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>http://rus-cat.com/production/noatube-duos.html</loc>
-	<lastmod>2015-01-15T07:40:52+01:00</lastmod>
+	<lastmod>2015-04-02T09:24:17+01:00</lastmod>
 	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://rus-cat.com/./../production/shaker.html</loc>
+	<lastmod>2015-04-02T09:24:29+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 </urlset>
