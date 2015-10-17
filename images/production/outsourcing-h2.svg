@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="116px" height="116px" viewBox="0 0 116 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>H + 2 + Oval 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="H-+-2-+-Oval-1" sketch:type="MSLayerGroup" transform="translate(6.000000, 6.000000)">
+            <g id="H-+-2" transform="translate(26.620390, 14.889371)" font-family="Avenir Next" fill="#000000" sketch:type="MSTextLayer" font-weight="bold">
+                <text id="H" font-size="54.143167">
+                    <tspan x="0.112798265" y="54.1127983">H</tspan>
+                </text>
+                <text id="2" font-size="27.0715835">
+                    <tspan x="41.6225597" y="58.8091106">2</tspan>
+                </text>
+            </g>
+            <circle id="Oval-1" stroke="#000000" stroke-width="11" sketch:type="MSShapeGroup" cx="52" cy="52" r="52"></circle>
+        </g>
+    </g>
+</svg>

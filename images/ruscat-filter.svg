@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="360px" height="413px" viewBox="0 0 360 413" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>ruscat-catalyst</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="ruscat-catalyst" sketch:type="MSLayerGroup">
+            <g id="Layer_6" sketch:type="MSShapeGroup">
+                <path d="M359.532,305.596 C359.532,308.346 357.584,311.721 355.202,313.096 L184.15,411.875 C181.768,413.25 177.872,413.25 175.491,411.875 L4.423,313.121 C2.042,311.746 0.093,308.371 0.092,305.621 L0.075,108.101 C0.075,105.351 2.022,101.976 4.404,100.601 L175.46,1.823 C177.842,0.448 181.739,0.448 184.12,1.822 L355.189,100.571 C357.57,101.946 359.519,105.321 359.52,108.071 L359.532,305.596 L359.532,305.596 Z" id="Shape" fill="#0085C8"></path>
+                <g id="Group-+-Group-Copy-+-Rectangle-7-+-Rectangle-7-Copy-+-Line-+-Line-Copy" transform="translate(65.000000, 119.000000)">
+                    <g id="Group-+-Group-Copy-+-Rectangle-7-+-Rectangle-7-Copy" transform="translate(81.000000, 0.500000)" fill="#FFFFFF">
+                        <g id="Group-+-Group-Copy" transform="translate(2.566038, 19.293680)">
+                            <g id="Group">
+                                <ellipse id="Oval-43" cx="13.4716981" cy="13.5055762" rx="13.4716981" ry="13.5055762"></ellipse>
+                                <ellipse id="Oval-43-Copy" cx="13.4716981" cy="48.8773234" rx="13.4716981" ry="13.5055762"></ellipse>
+                                <ellipse id="Oval-43-Copy-2" cx="13.4716981" cy="84.2490706" rx="13.4716981" ry="13.5055762"></ellipse>
+                                <ellipse id="Oval-43-Copy-3" cx="13.4716981" cy="120.907063" rx="13.4716981" ry="13.5055762"></ellipse>
+                            </g>
+                            <g id="Group-Copy" transform="translate(35.924528, 0.000000)">
+                                <ellipse id="Oval-43" cx="13.4716981" cy="13.5055762" rx="13.4716981" ry="13.5055762"></ellipse>
+                                <ellipse id="Oval-43-Copy" cx="13.4716981" cy="48.8773234" rx="13.4716981" ry="13.5055762"></ellipse>
+                                <ellipse id="Oval-43-Copy-2" cx="13.4716981" cy="84.2490706" rx="13.4716981" ry="13.5055762"></ellipse>
+                                <ellipse id="Oval-43-Copy-3" cx="13.4716981" cy="120.907063" rx="13.4716981" ry="13.5055762"></ellipse>
+                            </g>
+                        </g>
+                        <rect id="Rectangle-7" x="0.320754717" y="0" width="67.3584906" height="14.1486989"></rect>
+                        <rect id="Rectangle-7-Copy" x="0.320754717" y="158.851301" width="67.3584906" height="14.1486989"></rect>
+                    </g>
+                    <g id="Line-+-Line-Copy" transform="translate(0.000000, 4.500000)" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round">
+                        <path d="M0.5,0.5 L67,46" id="Line"></path>
+                        <path d="M0.5,119.5 L67,165" id="Line-Copy" transform="translate(33.750000, 142.250000) scale(1, -1) translate(-33.750000, -142.250000) "></path>
+                    </g>
+                </g>
+                <path d="M280.246223,178.5 L226.492447,178.5 L226.492447,234.5 L280.246223,234.5 L280.246223,260.253777 L334,206.5 L280.246223,152.746223 L280.246223,178.5 Z" id="Rectangle-9" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
