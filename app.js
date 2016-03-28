@@ -1,9 +1,8 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"./src/javascript/app.coffee":[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 require('./ng-app');
 
 
-
-},{"./ng-app":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-app.coffee"}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/catalyst-data.coffee":[function(require,module,exports){
+},{"./ng-app":4}],2:[function(require,module,exports){
 var data;
 
 data = {
@@ -57,8 +56,7 @@ data = {
 module.exports = data;
 
 
-
-},{}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/extend-deep.coffee":[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 var extendDeep;
 
 extendDeep = (function(dst) {
@@ -79,8 +77,7 @@ extendDeep = (function(dst) {
 module.exports = extendDeep;
 
 
-
-},{}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-app.coffee":[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 var ngModule;
 
 module.exports = (ngModule = angular.module('app', [require('./ng-catalyst'), require('./ng-wizard-catalyst'), require('./ng-filter')])).name;
@@ -166,10 +163,9 @@ $(function() {
 });
 
 
-
-},{"./ng-catalyst":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-catalyst.coffee","./ng-filter":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-filter.coffee","./ng-wizard-catalyst":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-wizard-catalyst.coffee"}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-catalyst.coffee":[function(require,module,exports){
+},{"./ng-catalyst":5,"./ng-filter":6,"./ng-wizard-catalyst":7}],5:[function(require,module,exports){
 var catalystData, extendDeep, metalNumberTitle, ngModule,
-  __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+  indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
 module.exports = (ngModule = angular.module('catalyst', [])).name;
 
@@ -179,7 +175,7 @@ extendDeep = require('./extend-deep');
 
 ngModule.controller('catalyst', [
   '$scope', '$http', '$location', '$timeout', (function($scope, $http, $location, $timeout) {
-    var carrierName, cellIndex, metalName, metalNumber, product, size, sizeStr, urlStr, _ref;
+    var carrierName, cellIndex, metalName, metalNumber, product, ref, size, sizeStr, urlStr;
     urlStr = location.href;
     console.log('carrier:', carrierName = $.url(urlStr).param('cr'));
     console.log('size:', size = $.url(urlStr).param('sz'));
@@ -197,7 +193,7 @@ ngModule.controller('catalyst', [
       }
       $scope.product.params.carrier = product.params.carrierArray[carrierName];
       $scope.product.techParams.activeSubstrate = product.params.carrierArray[carrierName];
-      if (_ref = +cellIndex, __indexOf.call([0, 1, 2], _ref) >= 0) {
+      if (ref = +cellIndex, indexOf.call([0, 1, 2], ref) >= 0) {
         $scope.product.params.cell = product.params.cellArray[cellIndex];
       }
       $scope.product.params.metal = product.params.metalArray[metalName];
@@ -273,8 +269,7 @@ metalNumberTitle = (function(mlName, mlNum) {
 });
 
 
-
-},{"./catalyst-data":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/catalyst-data.coffee","./extend-deep":"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/extend-deep.coffee"}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-filter.coffee":[function(require,module,exports){
+},{"./catalyst-data":2,"./extend-deep":3}],6:[function(require,module,exports){
 var ngModule;
 
 module.exports = (ngModule = angular.module('filter', [])).name;
@@ -332,8 +327,7 @@ ngModule.controller('filter', [
 ]);
 
 
-
-},{}],"/Users/Trikster/static_sites/RusCat/_RusCat/src/javascript/ng-wizard-catalyst.coffee":[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 var ngModule;
 
 module.exports = (ngModule = angular.module('wizard-catalyst', [])).name;
@@ -408,5 +402,4 @@ ngModule.controller('catalyst-choice', [
 ]);
 
 
-
-},{}]},{},["./src/javascript/app.coffee"]);
+},{}]},{},[1]);

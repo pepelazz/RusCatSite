@@ -1,3 +1,4 @@
+/* line 1, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_loader.sass */
 #hideAll {
   position: fixed;
   left: 0px;
@@ -5,139 +6,140 @@
   top: 0px;
   bottom: 0px;
   background-color: white;
-  z-index: 10000;
-}
-#hideAll .loader {
-  width: 8rem;
-  margin: 0.5rem auto 0;
-}
-#hideAll .loader > div {
-  width: 2rem;
-  height: 2rem;
-  background-color: #0dcecb;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
-  animation: bouncedelay 1.4s infinite ease-in-out;
-  /* Prevent first frame from flickering when animation starts */
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-#hideAll .loader .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-#hideAll .loader .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
+  z-index: 10000; }
+  /* line 9, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_loader.sass */
+  #hideAll .loader {
+    width: 8rem;
+    margin: 0.5rem auto 0; }
+    /* line 12, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_loader.sass */
+    #hideAll .loader > div {
+      width: 2rem;
+      height: 2rem;
+      background-color: #0DCECB;
+      -webkit-border-radius: 100%;
+              border-radius: 100%;
+      display: inline-block;
+      -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+      animation: bouncedelay 1.4s infinite ease-in-out;
+      /* Prevent first frame from flickering when animation starts */
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both; }
+    /* line 24, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_loader.sass */
+    #hideAll .loader .bounce1 {
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s; }
+    /* line 27, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_loader.sass */
+    #hideAll .loader .bounce2 {
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s; }
 
 @-webkit-keyframes bouncedelay {
   0%, 80%, 100% {
-    -webkit-transform: scale(0);
-  }
-
+    -webkit-transform: scale(0); }
   40% {
-    -webkit-transform: scale(1);
-  }
-}
+    -webkit-transform: scale(1); } }
+
 @keyframes bouncedelay {
   0%, 80%, 100% {
     transform: scale(0);
-    -webkit-transform: scale(0);
-  }
-
+    -webkit-transform: scale(0); }
   40% {
     transform: scale(1);
-    -webkit-transform: scale(1);
-  }
-}
-#portfolio_item {
-  position: relative;
-}
-#portfolio_item #hideAll {
-  position: absolute;
-  background: url("./images/backgrounds/wild_oliva_light.png");
-}
+    -webkit-transform: scale(1); } }
 
+/* line 47, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_loader.sass */
+#portfolio_item {
+  position: relative; }
+  /* line 49, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_loader.sass */
+  #portfolio_item #hideAll {
+    position: absolute;
+    background: url("./images/backgrounds/wild_oliva_light.png"); }
+
+/* line 1, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 #map {
   height: 500px;
-  widows: 100%;
-}
+  widows: 100%; }
 
+/* line 6, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 #main-menu .dropdown-menu {
-  background: url(./../images/backgrounds/wild_oliva_light_head.png);
-}
-#main-menu .dropdown-menu:after, #main-menu .dropdown-menu:before {
-  content: none;
-}
-#main-menu .dropdown-menu a {
-  border-bottom: none;
-}
+  background: url(./../images/backgrounds/wild_oliva_light_head.png); }
+  /* line 8, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  #main-menu .dropdown-menu:after, #main-menu .dropdown-menu:before {
+    content: none; }
+  /* line 10, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  #main-menu .dropdown-menu a {
+    border-bottom: none; }
 
+/* line 18, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 .wisard-list {
   list-style: none;
-  margin: 0;
-}
-.wisard-list li {
-  margin-bottom: 1rem;
-}
-.wisard-list .wizard-btn {
-  display: inline-block;
-  width: 14rem;
-  padding: 0.2rem 0.5rem;
-  background-color: #d22035;
-  text-align: center;
-  font-size: 1rem;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px 0 0 5px;
-  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
-}
-@media (min-width: 768px) {
+  margin: 0; }
+  /* line 21, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  .wisard-list li {
+    margin-bottom: 1rem; }
+  /* line 23, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
   .wisard-list .wizard-btn {
+    display: inline-block;
+    width: 14rem;
+    padding: 0.2rem 0.5rem;
+    background-color: #D22035;
+    text-align: center;
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-border-radius: 5px 0 0 5px;
+            border-radius: 5px 0 0 5px;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75); }
+    @media screen and (min-width: 768px) {
+      /* line 23, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+      .wisard-list .wizard-btn {
+        width: 20rem; } }
+    /* line 34, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+    .wisard-list .wizard-btn:hover {
+      background-color: #a6192a; }
+    /* line 36, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+    .wisard-list .wizard-btn.open {
+      -webkit-border-radius: 5px 0 0 0;
+              border-radius: 5px 0 0 0; }
+  /* line 38, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  .wisard-list .btn-description-toggle {
+    display: inline-block;
+    font-size: 1rem;
+    background: #D22035;
+    padding: 0.2rem 0.5rem;
+    margin-left: -2px;
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-border-radius: 0 5px 5px 0;
+            border-radius: 0 5px 5px 0;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75); }
+    /* line 48, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+    .wisard-list .btn-description-toggle:hover {
+      background-color: #a6192a; }
+  /* line 50, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  .wisard-list .wizard-description {
     width: 20rem;
-  }
-}
-.wisard-list .wizard-btn:hover {
-  background-color: #a6192a;
-}
-.wisard-list .wizard-btn.open {
-  border-radius: 5px 0 0 0;
-}
-.wisard-list .btn-description-toggle {
-  display: inline-block;
-  font-size: 1rem;
-  background: #d22035;
-  padding: 0.2rem 0.5rem;
-  margin-left: -2px;
-  color: white;
-  cursor: pointer;
-  border-radius: 0 5px 5px 0;
-  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
-}
-.wisard-list .btn-description-toggle:hover {
-  background-color: #a6192a;
-}
-.wisard-list .wizard-description {
-  width: 20rem;
-  font-size: 0.9rem;
-  background: #f3f3f3;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0 0 5px 5px;
-  color: black;
-  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
-}
-.wisard-list .img-size {
-  display: block;
-  margin: 2rem 2rem;
-}
+    font-size: 0.9rem;
+    background: #F3F3F3;
+    padding: 0.2rem 0.5rem;
+    -webkit-border-radius: 0 0 5px 5px;
+            border-radius: 0 0 5px 5px;
+    color: #000000;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75); }
+  /* line 58, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  .wisard-list .img-size {
+    display: block;
+    margin: 2rem 2rem; }
 
+/* line 62, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 .wizard-quest-teaser {
   width: 21rem;
-  text-align: justify;
-}
+  text-align: justify; }
 
+/* line 67, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 .nav-arrows i {
   display: block;
   margin-top: -0.5rem;
@@ -145,121 +147,118 @@
   padding-left: 2px;
   font-size: 1.5rem;
   cursor: pointer;
-  opacity: 0.5;
-}
-.nav-arrows i:hover {
-  opacity: 1;
-}
+  opacity: 0.5; }
+  /* line 75, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  .nav-arrows i:hover {
+    opacity: 1; }
 
+/* line 78, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 #calculator {
   position: fixed;
   right: 4px;
   top: 30%;
   z-index: 1000;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
-  background-color: #d22035;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #D22035;
   -webkit-transform: translateX(46%) rotate(-90deg);
-  transform: translateX(46%) rotate(-90deg);
+  -ms-transform: translateX(46%) rotate(-90deg);
+      transform: translateX(46%) rotate(-90deg);
   text-decoration: none;
   color: white;
   font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
+/* line 94, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 .vpyk-technical-header {
-  font-size: 30px;
-}
+  font-size: 30px; }
 
+/* line 98, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 .vpyk-technical-tags {
   list-style: none;
   margin-left: 0;
-  overflow: hidden;
-}
-.vpyk-technical-tags li {
-  float: left;
-  margin-right: 10px;
-  margin-bottom: 8px;
-}
+  overflow: hidden; }
+  /* line 102, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  .vpyk-technical-tags li {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 8px; }
 
+/* line 109, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 .vpyk-technical-table td {
-  font-size: 12px;
-}
+  font-size: 12px; }
 
+/* line 114, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 .equipment-grid a:hover {
   display: inline-block;
-  background: gainsboro;
-}
+  background: gainsboro; }
 
+/* line 118, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 .btn-order {
   padding: 1rem 0.5rem;
   width: 100%;
-  font-size: 1.5rem;
-}
+  font-size: 1.5rem; }
 
+/* line 123, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 #modal {
   display: none;
   position: relative;
   background: white;
   border: 1px solid;
-  border-color: lightslategray;
-  padding: 2rem 3rem;
-}
-#modal.show {
-  display: block;
-}
-#modal .input-title {
-  text-align: right;
-  padding-right: 1rem;
-}
-#modal input {
-  width: 93%;
-  line-height: 2;
-  padding: 0.2rem 0.5rem;
-}
-#modal textarea {
-  width: 94%;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0px;
-}
-#modal > div {
-  overflow: auto;
-  margin-bottom: 0.5rem;
-}
-#modal .btn {
-  padding: 0.5rem;
-  margin-top: 1rem;
-  border: 1px solid gray;
-  cursor: pointer;
-  text-align: center;
-}
-#modal .close {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  opacity: 0.5;
-  cursor: pointer;
-}
+  border-color: #778899;
+  padding: 2rem 3rem; }
+  /* line 125, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  #modal.show {
+    display: block; }
+  /* line 132, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  #modal .input-title {
+    text-align: right;
+    padding-right: 1rem; }
+  /* line 135, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  #modal input {
+    width: 93%;
+    line-height: 2;
+    padding: 0.2rem 0.5rem; }
+  /* line 139, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  #modal textarea {
+    width: 94%;
+    padding: 0.2rem 0.5rem;
+    -webkit-border-radius: 0px;
+            border-radius: 0px; }
+  /* line 143, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  #modal > div {
+    overflow: auto;
+    margin-bottom: 0.5rem; }
+  /* line 146, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  #modal .btn {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border: 1px solid #808080;
+    cursor: pointer;
+    text-align: center; }
+  /* line 152, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  #modal .close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    opacity: 0.5;
+    cursor: pointer; }
 
+/* line 160, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 #logo_subtitle_phone {
   color: black;
   font-size: 18px;
-  font-weight: 700;
-}
+  font-weight: 700; }
 
+/* line 165, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
 .contact {
-  margin-left: 1rem;
-}
-.contact p {
-  float: left;
-  margin-right: 1rem;
-}
-.contact p i {
-  margin-right: 0.5rem;
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguY3NzIiwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZXMiOlsiaW5kZXguc2FzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiY29tcGFzcy9jc3MzL3RyYW5zaXRpb25cIlxuXG5AaW1wb3J0IFwic3VzeVwiXG5AaW1wb3J0IFwiYnJlYWtwb2ludFwiXG5cblxuLy8tLS0gVmFyaWFibGVzXG4vL21lZGlhXG4kYnJlYWstc21hbGw6ICAgNzY4cHhcbiRicmVhay1tZWRpdW06ICA5OTJweFxuJGJyZWFrLWxhcmdlOiAgMTIwMHB4XG5cbi8vY29sb3JzXG5cblxuLy9zaXplc1xuXG5cbi8vZm9udC1zaXplc1xuXG5cbi8vLS0tIE1peGluc1xuQG1peGluIGNvbmFpbmVyLWxlZnQtcGFkZGluZ1xuXG5cbkBtaXhpbiBidG4oJGJnLWNvbG9yLCRjb2xvcilcbiAgYm9yZGVyOiAxcHggc29saWQgIzAwMDAwMFxuICBwYWRkaW5nOiA1cHggMTJweCA1cHggMTBweFxuICBiYWNrZ3JvdW5kOiAkYmctY29sb3JcbiAgY29sb3I6ICRjb2xvclxuICBpXG4gICAgZm9udC1zaXplOiAxNXB4XG4gICAgbWFyZ2luLXJpZ2h0OiA0cHhcbiAgJjpob3ZlclxuICAgIGJhY2tncm91bmQ6IGRhcmtlbigkYmctY29sb3IsIDEwJSlcbiAgICBjb2xvcjogbGlnaHRlbigkY29sb3IsIDMwJSlcblxuQG1peGluIGhvcml6b250YWwtbGlzdCgkbWFyZ2luLXJpZ2h0KVxuICBsaXN0LXN0eWxlLXR5cGU6IG5vbmVcbiAgbGlcbiAgICBmbG9hdDogbGVmdFxuICAgIG1hcmdpbi1yaWdodDogJG1hcmdpbi1yaWdodFxuXG5AaW1wb3J0IFwibGliL3Jlc3BvbnNpdmVcIlxuQGltcG9ydCBcInBhcnRpYWxzL2xvYWRlclwiXG5AaW1wb3J0IFwicGFydGlhbHMvc3R5bGVcIlxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguY3NzIiwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZXMiOlsiaW5kZXguc2FzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiY29tcGFzcy9jc3MzL3RyYW5zaXRpb25cIlxuXG5AaW1wb3J0IFwic3VzeVwiXG5AaW1wb3J0IFwiYnJlYWtwb2ludFwiXG5cblxuLy8tLS0gVmFyaWFibGVzXG4vL21lZGlhXG4kYnJlYWstc21hbGw6ICAgNzY4cHhcbiRicmVhay1tZWRpdW06ICA5OTJweFxuJGJyZWFrLWxhcmdlOiAgMTIwMHB4XG5cbi8vY29sb3JzXG5cblxuLy9zaXplc1xuXG5cbi8vZm9udC1zaXplc1xuXG5cbi8vLS0tIE1peGluc1xuQG1peGluIGNvbmFpbmVyLWxlZnQtcGFkZGluZ1xuXG5cbkBtaXhpbiBidG4oJGJnLWNvbG9yLCRjb2xvcilcbiAgYm9yZGVyOiAxcHggc29saWQgIzAwMDAwMFxuICBwYWRkaW5nOiA1cHggMTJweCA1cHggMTBweFxuICBiYWNrZ3JvdW5kOiAkYmctY29sb3JcbiAgY29sb3I6ICRjb2xvclxuICBpXG4gICAgZm9udC1zaXplOiAxNXB4XG4gICAgbWFyZ2luLXJpZ2h0OiA0cHhcbiAgJjpob3ZlclxuICAgIGJhY2tncm91bmQ6IGRhcmtlbigkYmctY29sb3IsIDEwJSlcbiAgICBjb2xvcjogbGlnaHRlbigkY29sb3IsIDMwJSlcblxuQG1peGluIGhvcml6b250YWwtbGlzdCgkbWFyZ2luLXJpZ2h0KVxuICBsaXN0LXN0eWxlLXR5cGU6IG5vbmVcbiAgbGlcbiAgICBmbG9hdDogbGVmdFxuICAgIG1hcmdpbi1yaWdodDogJG1hcmdpbi1yaWdodFxuXG5AaW1wb3J0IFwibGliL3Jlc3BvbnNpdmVcIlxuQGltcG9ydCBcInBhcnRpYWxzL2xvYWRlclwiXG5AaW1wb3J0IFwicGFydGlhbHMvc3R5bGVcIlxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguY3NzIiwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZXMiOlsiaW5kZXguc2FzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiY29tcGFzcy9jc3MzL3RyYW5zaXRpb25cIlxuXG5AaW1wb3J0IFwic3VzeVwiXG5AaW1wb3J0IFwiYnJlYWtwb2ludFwiXG5cblxuLy8tLS0gVmFyaWFibGVzXG4vL21lZGlhXG4kYnJlYWstc21hbGw6ICAgNzY4cHhcbiRicmVhay1tZWRpdW06ICA5OTJweFxuJGJyZWFrLWxhcmdlOiAgMTIwMHB4XG5cbi8vY29sb3JzXG5cblxuLy9zaXplc1xuXG5cbi8vZm9udC1zaXplc1xuXG5cbi8vLS0tIE1peGluc1xuQG1peGluIGNvbmFpbmVyLWxlZnQtcGFkZGluZ1xuXG5cbkBtaXhpbiBidG4oJGJnLWNvbG9yLCRjb2xvcilcbiAgYm9yZGVyOiAxcHggc29saWQgIzAwMDAwMFxuICBwYWRkaW5nOiA1cHggMTJweCA1cHggMTBweFxuICBiYWNrZ3JvdW5kOiAkYmctY29sb3JcbiAgY29sb3I6ICRjb2xvclxuICBpXG4gICAgZm9udC1zaXplOiAxNXB4XG4gICAgbWFyZ2luLXJpZ2h0OiA0cHhcbiAgJjpob3ZlclxuICAgIGJhY2tncm91bmQ6IGRhcmtlbigkYmctY29sb3IsIDEwJSlcbiAgICBjb2xvcjogbGlnaHRlbigkY29sb3IsIDMwJSlcblxuQG1peGluIGhvcml6b250YWwtbGlzdCgkbWFyZ2luLXJpZ2h0KVxuICBsaXN0LXN0eWxlLXR5cGU6IG5vbmVcbiAgbGlcbiAgICBmbG9hdDogbGVmdFxuICAgIG1hcmdpbi1yaWdodDogJG1hcmdpbi1yaWdodFxuXG5AaW1wb3J0IFwibGliL3Jlc3BvbnNpdmVcIlxuQGltcG9ydCBcInBhcnRpYWxzL2xvYWRlclwiXG5AaW1wb3J0IFwicGFydGlhbHMvc3R5bGVcIlxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguY3NzIiwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZXMiOlsiaW5kZXguc2FzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiY29tcGFzcy9jc3MzL3RyYW5zaXRpb25cIlxuXG5AaW1wb3J0IFwic3VzeVwiXG5AaW1wb3J0IFwiYnJlYWtwb2ludFwiXG5cblxuLy8tLS0gVmFyaWFibGVzXG4vL21lZGlhXG4kYnJlYWstc21hbGw6ICAgNzY4cHhcbiRicmVhay1tZWRpdW06ICA5OTJweFxuJGJyZWFrLWxhcmdlOiAgMTIwMHB4XG5cbi8vY29sb3JzXG5cblxuLy9zaXplc1xuXG5cbi8vZm9udC1zaXplc1xuXG5cbi8vLS0tIE1peGluc1xuQG1peGluIGNvbmFpbmVyLWxlZnQtcGFkZGluZ1xuXG5cbkBtaXhpbiBidG4oJGJnLWNvbG9yLCRjb2xvcilcbiAgYm9yZGVyOiAxcHggc29saWQgIzAwMDAwMFxuICBwYWRkaW5nOiA1cHggMTJweCA1cHggMTBweFxuICBiYWNrZ3JvdW5kOiAkYmctY29sb3JcbiAgY29sb3I6ICRjb2xvclxuICBpXG4gICAgZm9udC1zaXplOiAxNXB4XG4gICAgbWFyZ2luLXJpZ2h0OiA0cHhcbiAgJjpob3ZlclxuICAgIGJhY2tncm91bmQ6IGRhcmtlbigkYmctY29sb3IsIDEwJSlcbiAgICBjb2xvcjogbGlnaHRlbigkY29sb3IsIDMwJSlcblxuQG1peGluIGhvcml6b250YWwtbGlzdCgkbWFyZ2luLXJpZ2h0KVxuICBsaXN0LXN0eWxlLXR5cGU6IG5vbmVcbiAgbGlcbiAgICBmbG9hdDogbGVmdFxuICAgIG1hcmdpbi1yaWdodDogJG1hcmdpbi1yaWdodFxuXG5AaW1wb3J0IFwibGliL3Jlc3BvbnNpdmVcIlxuQGltcG9ydCBcInBhcnRpYWxzL2xvYWRlclwiXG5AaW1wb3J0IFwicGFydGlhbHMvc3R5bGVcIlxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */
+  margin-left: 1rem; }
+  /* line 167, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+  .contact p {
+    float: left;
+    margin-right: 1rem; }
+    /* line 170, /Users/Trikster/static_sites/RusCat/_RusCat/src/sass/partials/_style.sass */
+    .contact p i {
+      margin-right: 0.5rem; }
